@@ -1,3 +1,5 @@
+import 'package:admin_panel/screens/all_order_screen.dart';
+import 'package:admin_panel/screens/all_product_screen.dart';
 import 'package:admin_panel/screens/all_user_screen.dart';
 import 'package:admin_panel/utils/app_constant.dart';
 import 'package:flutter/material.dart';
@@ -72,12 +74,11 @@ class _DrawerWidgetsState extends State<DrawerWidgets> {
                 // ),
               ),
             ),
-             Padding(
-              
+            Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: ListTile(
-                 onTap: () {
-                  Get.to(()=>const AllUserScreen());
+                onTap: () {
+                  Get.to(() => const AllUserScreen());
                 },
                 titleAlignment: ListTileTitleAlignment.center,
                 title: const Text(
@@ -88,22 +89,25 @@ class _DrawerWidgetsState extends State<DrawerWidgets> {
                   Icons.person,
                   color: AppConstant.appTextColor,
                 ),
-               
+
                 // trailing: Icon(
                 //   Icons.arrow_forward,
                 //   color: AppConstant.appTextColor,
                 // ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: ListTile(
+                onTap: () {
+                  Get.to(() => const AllOrderScreen());
+                },
                 titleAlignment: ListTileTitleAlignment.center,
-                title: Text(
+                title: const Text(
                   "Orders",
                   style: TextStyle(color: AppConstant.appTextColor),
                 ),
-                leading: Icon(
+                leading: const Icon(
                   Icons.shopping_bag,
                   color: AppConstant.appTextColor,
                 ),
@@ -113,15 +117,18 @@ class _DrawerWidgetsState extends State<DrawerWidgets> {
                 // ),
               ),
             ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20.0),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
               child: ListTile(
+                onTap: () {
+                  Get.to(() => const AllProductScreen());
+                },
                 titleAlignment: ListTileTitleAlignment.center,
-                title: Text(
+                title: const Text(
                   "Products",
                   style: TextStyle(color: AppConstant.appTextColor),
                 ),
-                leading: Icon(
+                leading: const Icon(
                   Icons.production_quantity_limits,
                   color: AppConstant.appTextColor,
                 ),
@@ -136,7 +143,7 @@ class _DrawerWidgetsState extends State<DrawerWidgets> {
               child: ListTile(
                 titleAlignment: ListTileTitleAlignment.center,
                 title: const Text(
-                  "Orders",
+                  "Categories",
                   style: TextStyle(color: AppConstant.appTextColor),
                 ),
                 leading: const Icon(
